@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/TodoApp');
 
 //Model Todo
-/*var Todo = mongoose.model('Todo', {//defining the properties of a collection by the model - Todo
+var Todo = mongoose.model('Todo', {//defining the properties of a collection by the model - Todo
 	text: {
 		type: String,
 		required: true, 
@@ -33,7 +33,8 @@ newTodo.save().then((doc) => {
 }, (err) => {
 	console.log('Something went wrong');
 });
-*/
+
+
 //Model User
 var User = mongoose.model('User', {
 	email: {
