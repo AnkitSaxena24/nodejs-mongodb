@@ -10,7 +10,7 @@ var Todo = mongoose.model('Todo', {//defining the properties of a collection by 
 	},
 	completed: {
 		type: Boolean,
-		defualt: false
+		default: false
 	},
 	completedAt: {
 		type: Number,
@@ -19,16 +19,3 @@ var Todo = mongoose.model('Todo', {//defining the properties of a collection by 
 });
 
 module.exports = {Todo};
-
-
-//creating the entry in Todo collection
-/*var newTodo = new Todo({
-	text: '  Drive a car  '
-});
-*/
-/*//saving and priting the entry
-newTodo.save().then((doc) => {
-	console.log(`Saved Todo: ${doc}`);
-}, (err) => {
-	console.log('Something went wrong');
-});*/

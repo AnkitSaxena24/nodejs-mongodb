@@ -15,9 +15,3 @@ var newUser = new User({
 });
 
 module.exports = {User};
-
-/*newUser.save().then((email) => {
-	console.log(`User email is: ${email}`);
-}, (err) => {
-	console.log('Unable to save email');
-});*/
