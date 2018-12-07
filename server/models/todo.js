@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 
 //Model Todo
-var Todo = mongoose.model('Todo', {//defining the properties of a collection by the model - Todo
+const TodoSchema = new mongoose.Schema(
+{//defining the properties of a collection by the model - Todo
 	text: {
 		type: String,
 		required: true, 
@@ -17,5 +18,7 @@ var Todo = mongoose.model('Todo', {//defining the properties of a collection by 
 		default: null
 	}
 });
+
+const Todo = mongoose.model('Todo', TodoSchema);
 
 module.exports = {Todo};

@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 
 //Model User
-var User = mongoose.model('User', {
+var UserSchema = new mongoose.Schema(
+{
 	email: {
 		type: String, 
 		required: true, 
@@ -10,8 +11,10 @@ var User = mongoose.model('User', {
 	}
 });
 
-var newUser = new User({
+/*var newUser = new User({
 	email: 'ankitsaxena807@hotmail.com'
-});
+});*/
+
+const User = mongoose.model('User', UserSchema);
 
 module.exports = {User};
